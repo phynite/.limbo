@@ -3,9 +3,8 @@ alias off='setterm -cursor off'
 alias c='clear'
 alias q='exit'
 alias x='exit'
-alias repos='cd ~/Desktop/repos'
-alias shscr='cd ~/Desktop/repos/shscr;cd src'
-alias ins='sudo apt install '
+alias sa='sudo apt install '
+alias gc='git clone ' 
 exe()
 {
 	sudo cp "$1" /usr/bin/"$1"
