@@ -1,9 +1,11 @@
-set nocompatible
+:set nocompatible
 set number
 syntax on
 colorscheme distinguished
 filetype plugin on
 set showmatch
+
+let fname = expand("%")
 
 " General
 
@@ -16,6 +18,11 @@ inoremap ;q <Esc>:wq<Enter>
 autocmd FileType cpp inoremap ;m int main(int argc, char** argv)<Enter>{<Enter>}<Up><Enter><Tab>
 autocmd FileType cpp inoremap ;i if()<Enter>{<Enter>}<Up><Enter><Tab><Up><Up><Left>
 autocmd FileType cpp inoremap ;w while()<Enter>{<Enter>}<Up><Enter><Tab><Up><Up><Left>
+autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname<Enter>:redraw!<Enter>i
+
+" TeX Maps
+
+autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdftex' fname<Enter>:redraw!<Enter>i
 
 " Bash Maps
 
