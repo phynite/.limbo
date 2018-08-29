@@ -20,18 +20,18 @@ inoremap ;e <Esc>:q!<Enter>
 autocmd FileType cpp inoremap ;m int main(int argc, char** argv)<Enter>{<Enter>}<Up><Enter><Tab>
 autocmd FileType cpp inoremap ;i if()<Enter>{<Enter>}<Up><Enter><Tab><Up><Up><Left>
 autocmd FileType cpp inoremap ;w while()<Enter>{<Enter>}<Up><Enter><Tab><Up><Up><Left>
-autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname<Enter>:redraw!<Enter>i
+autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname '> /dev/null 2>&1 &' <Enter>:redraw!<Enter>i<Right>
 
 " TeX Maps
 
-autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex > /dev/null 2>&1' fname2<Enter>:redraw!<Enter>i
-autocmd FIleType tex inoremap ;m \documentclass{}<Esc>i
-autocmd FIleType tex inoremap ;a \author{}<Esc>i
-autocmd FIleType tex inoremap ;t \title{}<Esc>i
+autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex' fname '> /dev/null 2>&1 &' <Enter>:redraw!<Enter>i<Right>
+autocmd FIleType tex inoremap ;m \documentclass{}<Esc>i<Right>
+autocmd FIleType tex inoremap ;a \author{}<Esc>i<Right>
+autocmd FIleType tex inoremap ;t \title{}<Esc>i<Right>
 autocmd FIleType tex inoremap ;b \begin{document}<Enter><Enter><Enter><Enter>\end{document}<Esc>2ki
 autocmd FIleType tex inoremap ;se \section{}<Esc>i
-autocmd FIleType tex inoremap ;fr \begin{flushright}<Enter><Enter><Enter><Enter>\end{flushright}<Esc>2ki
-autocmd FIleType tex inoremap ;fl \begin{flushleft}<Enter><Enter><Enter><Enter>\end{flushleft}<Esc>2ki
+autocmd FIleType tex inoremap ;fr \begin{flushright}<Enter><Enter><Enter><Enter>\end{flushright}<Esc>2k
+autocmd FIleType tex inoremap ;fl \begin{flushleft}<Enter><Enter><Enter><Enter>\end{flushleft}<Esc>2k
 autocmd FIleType tex inoremap ;it \begin{itemize}<Enter><Enter>\end{itemize}<Esc>ki
 autocmd FIleType tex inoremap ;sb \subsection{}<Esc>i
 
