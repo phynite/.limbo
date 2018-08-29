@@ -11,7 +11,6 @@ let fname2 = expand("%:t")
 " General
 
 inoremap ;p <Esc>pi
-inoremap ;t <Enter><Enter><Tab>
 inoremap ;q <Esc>:wq<Enter>
 inoremap ;s <Esc>:w<Enter>i
 inoremap ;e <Esc>:q!<Enter>
@@ -26,6 +25,14 @@ autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname<Enter>:redraw
 " TeX Maps
 
 autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex' fname2<Enter>:redraw!<Enter>i
+autocmd FIleType tex inoremap ;m \documentclass{}<Esc>i
+autocmd FIleType tex inoremap ;a \author{}<Esc>i
+autocmd FIleType tex inoremap ;t \title{}<Esc>i
+autocmd FIleType tex inoremap ;b \begin{document}<Enter><Enter><Enter><Enter>\end{document}<Esc>2ki
+autocmd FIleType tex inoremap ;se \section{}<Esc>i
+autocmd FIleType tex inoremap ;fr \begin{flushright}<Enter><Enter><Enter><Enter>\end{flushright}<Esc>2ki
+autocmd FIleType tex inoremap ;fl \begin{flushleft}<Enter><Enter><Enter><Enter>\end{flushleft}<Esc>2ki
+autocmd FIleType tex inoremap ;it \begin{itemize}<Enter><Enter>\end{itemize}<Esc>ki
 
 " Bash Maps
 
