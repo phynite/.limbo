@@ -15,7 +15,6 @@ alias zh='source ~/.zshrc'
 alias v='vim'
 alias s='sudo'
 alias ka='killall '
-alias rd='rm -rf '
 
 # Functions
 
@@ -38,4 +37,11 @@ dexe()
 ch()
 {
 	chmod +x "$1"
+}
+
+# Download a repo from github
+
+gh()
+{
+	git clone https://github.com/$1
 }
