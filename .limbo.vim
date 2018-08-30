@@ -4,6 +4,7 @@ syntax on
 colorscheme distinguished
 filetype plugin on
 set showmatch
+set cursorline
 
 let fname = expand("%")
 let fname2 = expand("%:t")
@@ -39,4 +40,4 @@ autocmd FIleType tex inoremap ;sb \subsection{}<Esc>i
 
 autocmd FileType sh inoremap ;m #!/bin/bash<Enter><Enter>
 autocmd FileType sh inoremap ;i if [ ]<Enter>then<Enter><Tab><Enter>fi<Esc>4k 5li
-autocmd FileType sh inoremap ;w while [ ]<Enter>do<Enter><Tab><Enter>done<Esc>4k 5li
+autocmd FileType sh inoremap ;w while [ ]<Enter>do<Enter><Tab><Enter>done<Esc>4k 8li
