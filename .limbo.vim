@@ -6,6 +6,8 @@ filetype plugin on
 set showmatch
 set cursorline
 
+let view_out = "false"
+
 let fname = expand("%")
 let fname2 = expand("%:t")
 
@@ -21,11 +23,19 @@ inoremap ;e <Esc>:q!<Enter>
 autocmd FileType cpp inoremap ;m int main(int argc, char** argv)<Enter>{<Enter>}<Up><Enter><Tab>
 autocmd FileType cpp inoremap ;i if()<Enter>{<Enter>}<Up><Enter><Tab><Up><Up><Left>
 autocmd FileType cpp inoremap ;w while()<Enter>{<Enter>}<Up><Enter><Tab><Up><Up><Left>
-autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname '> /dev/null 2>&1 &' <Enter>:redraw!<Enter>i<Right>
-
+if view_out == "true"
+	autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname <Enter>:redraw!<Enter>i<Right>
+elseif view_out == "false"
+	autocmd FileType cpp inoremap ;c <Esc>:execute 'silent !g++' fname '> /dev/null 2>&1 &'<Enter>:redraw!<Enter>i<Right>
+endif
 " TeX Maps
 
-autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex' fname '> /dev/null 2>&1 &' <Enter>:redraw!<Enter>i<Right>
+autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex' fname <Enter>:redraw!<Enter>i<Right>
+if view_out == "true"
+	autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex' fname <Enter>:redraw!<Enter>i<Right>
+elseif view_out == "false"
+	autocmd FileType tex inoremap ;c <Esc>:execute 'silent !pdflatex' fname '> /dev/null 2>&1 &'<Enter>:redraw!<Enter>i<Right>
+endif
 autocmd FIleType tex inoremap ;m \documentclass{}<Esc>i<Right>
 autocmd FIleType tex inoremap ;a \author{}<Esc>i<Right>
 autocmd FIleType tex inoremap ;t \title{}<Esc>i<Right>
