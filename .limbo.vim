@@ -1,7 +1,7 @@
 set nocompatible
 set number
 syntax on
-colorscheme distinguished
+colorscheme fantasy
 filetype plugin on
 set showmatch
 set cursorline
