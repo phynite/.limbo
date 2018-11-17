@@ -1,3 +1,25 @@
 #!/bin/bash
 
-upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/percentage:/{print $2}'
+batt=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/percentage:/{print $2}')
+
+state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/state:/{print $2}')
+
+if [ "${state}" == "charging" ]
+then
+	t=""
+else
+	t=""
+fi
+
+echo "$t $batt"
+echo "$t $batt"
+
+if [ ${batt%?} -gt 50 ]
+then
+	echo "#48ef43"
+elif [ ${batt%?} -lt 20 ]
+then
+	echo "#af1b13"
+else
+	echo "#FF8000"
+fi
