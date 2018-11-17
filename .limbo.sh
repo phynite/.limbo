@@ -11,7 +11,7 @@ alias off='setterm -cursor off'
 alias c='clear'
 alias q='exit'
 alias x='exit'
-alias sa='sudo apt install '
+alias p='sudo pacman -Sy '
 alias gc='git clone '
 alias zh='source ~/.zshrc'
 alias v='vim'
@@ -21,12 +21,16 @@ alias bb='cd ..'
 alias tarc='tar -czvf '
 alias tare='tar -xvzf '
 alias gms='groff -ms '
+alias rd='rm -rf '
 
 alias repos='cd ~/repos'
 alias shscr='cd ~/repos/shscr/src'
 alias fl='fortune | lolcat'
+alias nl='neofetch --w3m --loop | lolcat'
+alias v3='vim ~/.config/i3/config'
+alias d3='cd ~/.config/i3'
 
-vclr="/usr/share/vim/vim80/colors"
+vd="/usr/share/vim/vim81/colors"
 
 # Functions
 
