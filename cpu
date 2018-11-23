@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mem_used=$(free -m | awk '/^Mem:/{print $3}')
+mem_total=$(free -m | awk '/^Mem:/{print $2}')
+mem_free=$(free -m | awk '/^Mem:/{print $4}')
+mem_u=$((mem_used+0))
+mem_t=$((mem_total+0))
+mem_perx=$(echo "($mem_u / $mem_t)*100" | bc -l)
+mem_per=$(echo ${mem_perx} | awk '{printf("%d\n",$1 + 0.5)}'  )
+
+echo "$mem_per%"
