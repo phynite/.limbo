@@ -4,17 +4,25 @@ batt=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/percentage
 
 state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/state:/{print $2}')
 
+tte=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/time to empty:/{print $4 " " $5}')
+ttf=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/time to full:/{print $4 " " $5}')
+
 if [ "${state}" == "charging" ]
 then
 	t=""
+	time=$ttf
 else
 	t=""
+	time=$tte
 fi
 
-echo "$t $batt"
-echo "$t $batt"
+echo "$t $batt $time"
+echo "$t $batt $time"
 
 if [ ${batt%?} -gt 50 ]
+then
+	echo "#48ef43"
+elif [ "${state}" == "charging" ] 
 then
 	echo "#48ef43"
 elif [ ${batt%?} -lt 20 ]
