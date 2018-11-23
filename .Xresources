@@ -1,10 +1,11 @@
-URxvt.font: xft:monospace:size=9
+URxvt.font: xft:hack:size=9
+
 URxvt.scrollBar: false
 urxvt.depth: 32
-!!urxvt*background: rgba:0000/0000/0200/c800
 URxvt.background: [75]#101218
 URxvt.fading: 25%
 URxvt.foreground: #d1d4e6
+URxvt.cursorColor: #ffffff
 
 !black
 *color0:         rgb:20/20/20
