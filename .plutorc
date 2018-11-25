@@ -5,9 +5,20 @@
 # | .__/|_|\__,_|\__\___/|_|  \___|
 # |_|
 
+# Rice stuff
+
 sel=rev
 theme=oxide
+
+# Keys
 
 exit=q
 del=r
 home=h
+
+# Move keys
+
+up=up
+down=down
+left=left
+right=right
