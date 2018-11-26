@@ -13,7 +13,7 @@ theme=oxide
 # Keys
 
 exit=q
-del=r
+del=d
 home=h
 
 # Move keys
@@ -22,3 +22,12 @@ up=up
 down=down
 left=left
 right=right
+
+# Macros
+
+macro:/home/gmk/wallpapers=w
+macro:/home/gmk/repos=p
+macro:/home/gmk/books=b
+macro:/home/gmk/.config=c
+macro:/home/gmk/.config/i3=i
+
