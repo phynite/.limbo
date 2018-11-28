@@ -1,2 +1,2 @@
-# .limbo
+# .limbo - ~/.*
 my dotfiles
