@@ -1,0 +1,37 @@
+#        _       _                 
+#  _ __ | |_   _| |_ ___  _ __ ___ 
+# | '_ \| | | | | __/ _ \| '__/ __|
+# | |_) | | |_| | || (_) | | | (__ 
+# | .__/|_|\__,_|\__\___/|_|  \___|
+# |_|
+
+# Rice stuff
+
+sel=rev
+theme=oxide
+
+# Attributes
+
+show-hidden=false
+
+# Keys
+
+exit=q
+del=d
+toggle-hidden=.
+
+# Move keys
+
+up=up
+down=down
+left=left
+right=right
+
+# Macros
+
+macro:/home/gmk/wallpapers=w
+macro:/home/gmk/repos=r
+macro:/home/gmk/books=b
+macro:/home/gmk/.config=c
+macro:/home/gmk/.config/i3=i
+macro:/home/gmk/=h
