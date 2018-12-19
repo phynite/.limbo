@@ -1,5 +1,0 @@
-#!/bin/bash
-
-p=$(iwconfig wlp3s0 | sed "s/Bit Rate=//g;" | awk 'FNR == 3 {print}' | awk '{print $1}')
-
-echo "$p MB/S"
