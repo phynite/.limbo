@@ -8,7 +8,7 @@
 # Rice stuff
 
 sel=rev
-theme=oxide
+theme=muted
 
 # Attributes
 
@@ -19,6 +19,7 @@ show-hidden=false
 exit=q
 del=d
 toggle-hidden=.
+move=m
 
 # Move keys
 
