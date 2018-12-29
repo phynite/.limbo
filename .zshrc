@@ -4,8 +4,6 @@
 # Path to your oh-my-zsh installation.
   export ZSH="/home/gmk/.oh-my-zsh"
 
-~/.scripts/nix
-
 printf "\n"
 todo
 printf "\n"
@@ -15,7 +13,7 @@ stty -ixon
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir user)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir)
 
 POWERLEVEL9K_DIR_HOME_BACKGROUND="240"
 POWERLEVEL9K_DIR_HOME_FOREGROUND="255"
@@ -99,12 +97,6 @@ gh() {
 
 # Move a file back on directory
 
-mb() {
-	mv $1 ../$1
-}
-
-# compile rust smartly
-
-rc() {
-	rustc $1 -A warnings
+b() {
+       mv $1 ../$1
 }
