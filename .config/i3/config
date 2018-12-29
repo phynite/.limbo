@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:System San Francisco Display 9
+font pango:Terminus 9.6
 
 floating_modifier $mod
 
@@ -175,8 +175,10 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-exec always feh --bg-scale ~/wallpapers/tree2.jpg
-exec_always feh --bg-scale ~/wallpapers/tree2.jpg
+bindsym $mod+p exec urxvt -e pluto
+
+exec always feh --bg-scale ~/wallpapers/house.jpg
+exec_always feh --bg-scale ~/wallpapers/house.jpg
 
 new_window none
 default_border none
@@ -186,3 +188,4 @@ exec_always compton --config ~/.config/compton.conf
 floating_maximum_size 2000 x 2000
 
 bindsym $mod+i exec surf -z 1.1 duckduckgo.com
+
