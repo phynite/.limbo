@@ -8,7 +8,7 @@
 # Rice stuff
 
 sel=rev
-theme=muted
+theme=desert
 
 # Attributes
 
@@ -35,4 +35,5 @@ macro:/home/gmk/repos=r
 macro:/home/gmk/books=b
 macro:/home/gmk/.config=c
 macro:/home/gmk/.config/i3=i
-macro:/home/gmk/=h
+macro:/home/gmk=h
+macro:/home/gmk/=~
