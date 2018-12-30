@@ -10,7 +10,7 @@ printf "\n"
 
 stty -ixon
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="angler"
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir)
@@ -48,7 +48,7 @@ alias off='setterm -cursor off'
 alias c='clear'
 alias q='exit'
 alias x='exit'
-alias pm='sudo pacman -Sy '
+alias pm='sudo pacman -S '
 alias gc='git clone '
 alias v='vim'
 alias s='sudo'
@@ -100,3 +100,4 @@ gh() {
 b() {
        mv $1 ../$1
 }
+#source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
