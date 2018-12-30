@@ -1,13 +1,13 @@
 set $mod Mod4
 
-font pango:Terminus 9.6
+font pango:iosevka 9.6
 
 floating_modifier $mod
 
 exec xcompmgr -c -f -n
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -69,10 +69,10 @@ bindsym $mod+a focus parent
 
 # workspaces
 
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -152,7 +152,7 @@ bar {
 	} 
 }
 
-bindsym $mod+shift+x exec ~/repos/bl
+bindsym $mod+shift+x exec ~/.scripts/bl
 
 bindsym $mod+shift+s exec scrot
 bindsym $mod+shift+d exec scrot -u
@@ -177,15 +177,16 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+p exec urxvt -e pluto
 
-exec always feh --bg-scale ~/wallpapers/house.jpg
-exec_always feh --bg-scale ~/wallpapers/house.jpg
+exec always feh --bg-scale ~/wallpapers/wave.jpg
+exec_always feh --bg-scale ~/wallpapers/wave.jpg
 
 new_window none
-default_border none
+default_border pixel 1
 
-exec_always compton --config ~/.config/compton.conf
+exec_always compton
+exec always compton
 
 floating_maximum_size 2000 x 2000
 
-bindsym $mod+i exec surf -z 1.1 duckduckgo.com
+bindsym $mod+i exec chromium
 
